@@ -1,5 +1,9 @@
 # RL Walker
 
+<p align="center">
+  <img src="docs/Walker.gif" width="500">
+</p>
+
 A reinforcement learning powered walking robot built with Python, Box2D and PPO.
 
 ## Overview
