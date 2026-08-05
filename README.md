@@ -24,6 +24,22 @@ The long-term goal is a fully autonomous quadruped robot capable of learning sta
 
 ---
 
+## Motivation
+
+This project was started to understand reinforcement learning from first principles.
+
+Instead of relying on existing simulators, the goal is to build every component from scratch:
+
+- physics
+- robot
+- rewards
+- training
+- locomotion
+
+Eventually the project will evolve into a fully autonomous quadruped robot.
+
+---
+
 ## Features
 
 * Custom Gymnasium environment
@@ -48,6 +64,28 @@ The long-term goal is a fully autonomous quadruped robot capable of learning sta
 - 🚧 Reward shaping
 - 🚧 Terrain generation
 - 🚧 Quadruped version
+
+---
+
+## How it works
+
+The PPO agent receives observations from the robot every simulation step.
+
+It outputs four continuous actions:
+
+- Left hip
+- Left knee
+- Right hip
+- Right knee
+
+These actions are converted into target joint positions and controlled using Box2D motors.
+
+The reward function encourages:
+
+- forward velocity
+- balance
+- smooth movements
+- low energy consumption
 
 ---
 
